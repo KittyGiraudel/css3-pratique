@@ -1,0 +1,60 @@
+/// Mixin to size elements.
+/// @param {Number} $width           - Width
+/// @param {Number} $height ($width) - Height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+/// Responsive manager.
+/// @require {variable} breakpoints
+/// @param {String} $breakpoint - Breakpoint
+/// @throw No value found for `$breakpoint`. Please make sure it is defined in `$breakpoints` map.
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @error "No value found for `#{$breakpoint}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+/// Bind all events, including self state if `$self` is true.
+/// @author Harry Roberts
+/// @link https://github.com/csswizardry/csswizardry.github.com/blob/master/css/_tools.mixins.scss#L13 CSSWizardry
+/// @param {Bool} $self - Include self state
+/// @output `:hover`, `:active` and `:focus`
+@mixin on-event($self: false) {
+  // If $self is truthy, include self state
+  @if $self {
+    &, &:hover, &:active, &:focus {
+      @content;
+    }
+  }
+
+  @else {
+    &:hover, &:active, &:focus {
+      @content;
+    }
+  }
+}
+
+
+/// Define a context for the current selector
+/// @author Hugo Giraudel
+/// @param {String} $context - Context
+/// @output `#{$context} & { ... }`
+@mixin context($context) {
+  #{$context} & {
+    @content;
+  }
+}

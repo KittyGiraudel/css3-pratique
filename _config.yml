@@ -1,0 +1,12 @@
+# Site settings
+title: CSS 3 Pratique du Design Web
+description: >
+  CSS 3 Pratique du Design Web
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://css3-pratique.com" # the base hostname & protocol for your site
+twitter_username: css3_pratique
+
+# Build settings
+markdown: kramdown
+sass:
+    sass_dir: _sass

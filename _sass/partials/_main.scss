@@ -1,0 +1,31 @@
+.main {
+  background: white;
+}
+
+.section {
+  overflow: hidden;
+  padding: 2em 0;
+  border-bottom: 1px solid silver;
+}
+
+.section__heading {
+  font-size: 2em;
+}
+
+.section__image {
+  float: left;
+  max-width: 50%;
+  margin-bottom: 1em;
+  margin-right: 2em;
+
+  .section:nth-of-type(even) & {
+    float: right;
+    margin-right: 0;
+    margin-left: 2em;
+  }
+
+}
+
+.section__body {
+  text-align: justify;
+}

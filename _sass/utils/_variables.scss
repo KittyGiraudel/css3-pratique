@@ -1,0 +1,26 @@
+/// Containers' max-width
+/// @type Number
+$max-width: 1170px !global;
+
+
+/// Breakpoints
+/// @type Map
+$breakpoints: (
+  'medium': (min-width: 767px),
+  'large': (min-width: 992px)
+) !global;
+
+
+/// Grey
+/// @type Color
+$grey: #95a5a6;
+
+
+/// Black
+/// @type Color
+$black: #2c3e50;
+
+
+/// Blue
+/// @type Color
+$blue: #2980b9;

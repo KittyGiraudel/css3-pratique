@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $black;
+  line-height: 1.35;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
