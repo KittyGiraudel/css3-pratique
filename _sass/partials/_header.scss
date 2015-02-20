@@ -6,23 +6,26 @@
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url('https://c2.staticflickr.com/6/5495/9227705841_81b97a085f_k.jpg') no-repeat $grey;
+    top: -2em;
+    right: -2em;
+    bottom: -2em;
+    left: -2em;
+    background: linear-gradient(rgba(black, .5), rgba(black, .5)), url('https://c2.staticflickr.com/6/5495/9227705841_81b97a085f_k.jpg') no-repeat $grey;
+    background-attachment: fixed;
     background-size: cover;
     z-index: -1;
-    -webkit-filter: brightness(1.5) blur(5px);
-    filter: blur(5px);
+    -webkit-filter: brightness(1.2) blur(5px);
+    -moz-filter: brightness(1.2) blur(5px);
+    filter: brightness(1.2) blur(5px);
   }
 }
 
 .header__title {
-  font-size: 4.5em;
+  font-size: 3.5em;
   text-transform: uppercase;
   padding: 4em 1em;
   margin: 0;
+  color: white;
 
   span {
     display: block;

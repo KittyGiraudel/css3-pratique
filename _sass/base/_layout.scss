@@ -1,7 +1,7 @@
 .container {
   padding: 0 1em;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     max-width: $max-width;
     margin: 0 auto;
   }
