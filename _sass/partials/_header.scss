@@ -2,6 +2,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: none;
 
   &::after {
     content: '';
@@ -10,13 +11,17 @@
     right: -2em;
     bottom: -2em;
     left: -2em;
-    background: linear-gradient(rgba(black, .5), rgba(black, .5)), url('https://c2.staticflickr.com/6/5495/9227705841_81b97a085f_k.jpg') no-repeat $grey;
+    background: linear-gradient(rgba(black, .5), rgba(black, .5)), url('/assets/images/cover.jpg') no-repeat $grey;
     background-attachment: fixed;
     background-size: cover;
     z-index: -1;
     -webkit-filter: brightness(1.2) blur(5px);
     -moz-filter: brightness(1.2) blur(5px);
     filter: brightness(1.2) blur(5px);
+  }
+
+  @include respond-to('medium') {
+    display: block;
   }
 }
 

@@ -34,23 +34,32 @@
 
 .avatars {
   position: relative;
-  height: 20em;
+  min-height: 22.5em;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     width: 50%;
   }
 }
 
 .avatar {
-  position: absolute;
   border-radius: 50%;
   border: .3em solid rgba(100, 0, 0, .5);
-  left: 0;
-  top: 0;
   -webkit-filter: sepia(1) hue-rotate(-40deg);
   -moz-filter: sepia(1) hue-rotate(-40deg);
   filter: sepia(1) hue-rotate(-40deg);
-  transition: 3s;
+  margin: 0 auto 1em;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+
+  @for $i from 1 through 3 {
+    &:nth-of-type(#{$i}) {
+      transform: rotate((-90deg + 360deg / 3 * $i)) translateX(130px) rotate((90deg + -360deg / 3 * $i));
+    }
+  }
 
   @include on-event {
     -webkit-filter: none;
@@ -58,26 +67,5 @@
     filter: none;
     transition: .25s;
   }
-}
 
-
-.avatar--coyier {
-  max-width: 8em;
-  top: 11em;
-
-  left: 50%;
-  margin-left: -16em;
-}
-
-.avatar--goetter {
-  max-width: 13em;
-  left: 50%;
-  top: 6em;
-}
-
-.avatar--giraudel {
-  max-width: 18em;
-
-  left: 50%;
-  margin-left: -12em;
 }

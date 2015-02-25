@@ -26,4 +26,8 @@ img {
   height: auto;
   max-width: 100%;
   display: block;
+
+  @media (max-width: 767px) {
+    max-width: 100% !important;
+  }
 }
