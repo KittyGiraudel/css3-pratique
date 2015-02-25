@@ -1,12 +1,12 @@
 # Site settings
 title: CSS 3 Pratique du Design Web
 description: >
-  CSS 3 Pratique du Design Web
+  CSS 3 Pratique du Design Web est un ouvrage technique destiné aux développeurs et intégrateurs désireux d'aller plus loin dans la pratique de CSS.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://css3-pratique.com" # the base hostname & protocol for your site
-twitter_username: css3_pratique
+url: "http://css3-pratique.fr" # the base hostname & protocol for your site
+twitter_username: HugoGiraudel
 
 # Build settings
 markdown: kramdown
 sass:
-    sass_dir: _sass
+    style: :compressed
