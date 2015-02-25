@@ -14,12 +14,19 @@ body {
 }
 
 a {
-  color: $blue;
+  color: $grey;
   text-decoration: none;
+  transition: .15s;
 
   @include on-event {
-    text-decoration: underline;
+    color: $blue;
   }
+}
+
+p a, li a {
+  background: -webkit-linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
+  background: linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
+  background-size: 100% 1px;
 }
 
 img {
