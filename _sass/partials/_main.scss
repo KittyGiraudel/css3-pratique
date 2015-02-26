@@ -14,6 +14,12 @@
     0 0.5em 0.5em -0.25em rgba(black, 0.25);
 }
 
+.section--about img {
+  @include respond-to('medium') {
+    margin-bottom: 5em;
+  }
+}
+
 .section__heading {
   font-size: 2em;
 }
